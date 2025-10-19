@@ -3,13 +3,19 @@ body{
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    overflow: hidden;
+    overflow-x: hidden;
+    color: rgb(49, 49, 49);
 }
 
 .container{
+    width: 100%;
+    height: 100vh;
+}
+
+.first-page{
     display: flex;
     width: 100%;
-    height: 94vh;
+    height: 100vh;
 }
 
 .left-content{
@@ -22,6 +28,7 @@ body{
 
 .text-icon {
     font-size: 35px;
+    margin: 0;
 }
 
 .opening-text{
@@ -44,6 +51,109 @@ body{
     color: #ff4c60;
 }
 
+.right-content{
+    height: 100%;
+    overflow: hidden;
+}
+
 .right-content img{
     width: 50rem;
+}
+
+/* SECOND PAGE */
+
+.second-page{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 7% 0% 7%;
+    min-height: 94%;
+}
+
+.left-profile img{
+    width: 30rem;
+}
+
+.pronounce{
+    width: 60rem;
+}
+
+.hi{
+    font-size: 60px;
+}
+
+.paragraph{
+    font-size: 25px;
+    line-height: 1.70;
+}
+
+.paragraph a{
+    color: #ff4c60;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* THIRD PAGE */
+
+.third-page{
+    display: flex;
+    justify-content: end;
+    padding: 0 7% 0 7%;
+}
+
+.left-content-third{
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-content-third p{
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 10rem;
+    letter-spacing: 1px;
+    gap: 50px;
+}
+
+.services-paragraph{
+    /* line-height: 1.5; */
+}
+
+.services-paragraph p{
+    font-size: 25px;
+    width: 60rem;
+}
+
+.services-paragraph p span{
+    color: #ff4c60;
+}
+
+.experience{
+    line-height: 0.75;
+}
+
+/* FOURTH PAGE */
+
+.fourth-page{
+    display: flex;
+    justify-content: end;
+    padding: 0 7% 3% 7%;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7% 3% 7%;
+    font-size: 20px;
+}
+
+.footer-contact{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-contact a{
+    text-decoration: none;
+    color: rgb(49, 49, 49);
 }
