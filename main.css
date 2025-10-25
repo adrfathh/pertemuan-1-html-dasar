@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -5,6 +9,12 @@ body{
     background-color: #f4f4f4;
     overflow-x: hidden;
     color: rgb(49, 49, 49);
+    transition: background-color 0.5s ease;    
+}
+
+body.dark-mode{
+    background-color: rgb(34, 34, 34);
+    color: #f4f4f4;
 }
 
 .container{
@@ -16,6 +26,78 @@ body{
     display: flex;
     width: 100%;
     height: 100vh;
+    justify-content: center;
+}
+
+.navbar{
+    position: fixed;
+    top: 50px;
+    height: 1rem;
+    width: 35vw;
+    display: flex;
+    padding: 1.25rem;
+    justify-content: space-around;
+    align-items: center;
+    background: transparent;
+    transition: backdrop-filter 0.3s, background 0.3s;
+    border-radius: 30px;
+}
+
+body.dark-mode .navigation{
+    color: #f4f4f4;
+}
+
+.navbar.scrolled{
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+body.dark-mode .navbar.scrolled{
+    background: rgba(34, 34, 34, 0.3);
+}
+
+select#bg-option{
+    font-weight: 600;
+    font-size: 15px;
+    width: 100px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(49, 49, 49);
+}
+
+body.dark-mode select#bg-option{
+    color: #f4f4f4;
+}
+
+.navigation{
+    color: rgb(49, 49, 49);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+select#bg-option option{
+    color: rgb(49, 49, 49);
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.toogle-dm{
+    color: rgb(49, 49, 49);
+    font-size: 15px;
+    width: 100px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+body.dark-mode .toogle-dm{
+    color: #f4f4f4;
 }
 
 .left-content{
@@ -45,6 +127,10 @@ body{
     color: black;
     margin-right: 50px;
     transition: all 0.5s ease;
+}
+
+body.dark-mode .contact a{
+    color: #f4f4f4;
 }
 
 .contact a:hover{
@@ -156,4 +242,36 @@ body{
 .footer-contact a{
     text-decoration: none;
     color: rgb(49, 49, 49);
+}
+
+body.dark-mode .footer-contact a{
+    color: #f4f4f4;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .first-page{
+        background-color: red;
+        height: 100%;
+    }
+    .text-icon{
+        font-size: 25px;
+    }
+    .opening-text{
+        width: 100%;
+        font-size: 30px;
+    }
+    .right-content img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+    }
 }
